@@ -6,17 +6,17 @@ const PageController = () => {
   const pageContext = useContext(PageContext);
   const { panZoomRef, setPrintDialogOpen } = pageContext;
 
-  const zoomIn = () => panZoomRef.current.zoomIn(2);
-  const zoomOut = () => panZoomRef.current.zoomOut(2);
+  const zoomIn = () => panZoomRef.current.zoomIn(2.5);
+  const zoomOut = () => panZoomRef.current.zoomOut(2.5);
   const centerReset = () => {
-    panZoomRef.current.autoCenter(1);
+    panZoomRef.current.autoCenter(2);
     panZoomRef.current.reset(1);
   };
 
   return (
     <div
       id="pageController"
-      className="absolute z-20 opacity-75 hover:opacity-100 transition-all duration-150"
+      className="absolute z-20 opacity-75 hover:opacity-100 transition-all duration-250"
     >
       <div className="text-2xl px-8 border border-gray-200 rounded-full bg-white flex justify-center items-center leading-none select-none">
         <div className="p-3 hover:bg-gray-200 cursor-pointer flex" onClick={zoomIn}>
@@ -34,7 +34,7 @@ const PageController = () => {
         <div className="text-gray-400 p-3">|</div>
 
         <div className="p-3 hover:bg-gray-200 cursor-pointer flex" onClick={() => window.print()}>
-          <i className="material-icons">print</i>
+          <i className="material-icons">printDialog</i>
         </div>
 
         <div
@@ -48,7 +48,7 @@ const PageController = () => {
 
         <a
           className="p-3 hover:bg-gray-200 cursor-pointer flex"
-          href="https://docs.rxresu.me/"
+          href="#"
           target="_blank"
           rel="noopener noreferrer"
         >
