@@ -37,6 +37,17 @@ const PageController = () => {
           <i className="material-icons">printDialog</i>
         </div>
 
+ <div className="text-gray-400 p-3">|</div>
+
+        <div className="p-3 hover:bg-gray-200 cursor-pointer flex" onClick={() => window.print()}>
+          <i className="material-icons">printDialog</i>
+        </div>
+ <div className="text-gray-400 p-3">|</div>
+
+        <div className="p-3 hover:bg-gray-200 cursor-pointer flex" onClick={() => window.print()}>
+          <i className="material-icons">printDialog</i>
+        </div>
+
         <div
           className="p-3 hover:bg-gray-200 cursor-pointer flex"
           onClick={() => setPrintDialogOpen(true)}
@@ -45,6 +56,10 @@ const PageController = () => {
         </div>
 
         <div className="text-gray-400 p-3">|</div>
+
+ <div className="text-gray-400 p-3">|</div>
+ <div className="text-gray-400 p-3">|</div>
+ <div className="text-gray-400 p-3">|</div>
 
         <a
           className="p-3 hover:bg-gray-200 cursor-pointer flex"
